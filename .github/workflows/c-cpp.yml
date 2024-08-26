@@ -18,6 +18,6 @@ jobs:
     - name: make
       run: c++ ~/work/Termdle/Termdle/Termdle.cpp -std=c++11 -o ~/Termdle_$(date "+%Y.%m.%d-%H.%M.%S").bin
     - uses: actions/upload-artifact@v4
-    with:
-      name: Upload artifact
-      path: ~/Termdle_*.bin
+      with:
+        name: Upload artifact
+        path: ~/Termdle_*.bin
