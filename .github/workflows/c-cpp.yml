@@ -16,4 +16,8 @@ jobs:
     - name: Setup C/C++ Compiler
       uses: rlalik/setup-cpp-compiler@v1.2
     - name: make
-      run: c++ ~/work/Termdle/Termdle/Termdle.cpp -std=c++11 -o Termdle
+      run: c++ ~/work/Termdle/Termdle/Termdle.cpp -std=c++11 -o ~/Termdle_$(date "+%Y.%m.%d-%H.%M.%S").bin
+    - uses: actions/upload-artifact@v4
+    with:
+      name: Upload artifact
+      path: ~/Termdle_*.bin
