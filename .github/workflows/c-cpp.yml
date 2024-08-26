@@ -12,7 +12,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - uses: actions/checkout@v4
     - name: Setup C/C++ Compiler
       uses: rlalik/setup-cpp-compiler@v1.2
     - name: make
-      run: c++ Termdle.cpp -std=c++11
+      run: c++ ~/work/Termdle/Termdle/Termdle.cpp -std=c++11 -o Termdle
